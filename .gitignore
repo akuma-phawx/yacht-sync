@@ -1,0 +1,10 @@
+.env
+service_account.json
+input_files/
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.mypy_cache/
+dist/
+*.egg-info/

@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yacht-sync"
+version = "0.1.0"
+description = "Match yacht invoices to outstanding payments and export a CSV."
+requires-python = ">=3.11"
+dependencies = [
+    "google-genai>=2.25.0",
+    "openpyxl>=3.1.5",
+    "pydantic>=2.13.0",
+    "pydantic-settings>=2.15.0",
+    "python-dotenv>=1.0.0",
+    "rich>=13.0.0",
+]
+
+[project.scripts]
+yacht-sync = "main:main"
+
+[tool.setuptools]
+py-modules = ["main", "config"]
+packages = ["services"]
